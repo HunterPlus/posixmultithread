@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 				 * that have already terminate.
 				 */
 				do {
-					pid = waitpid((pid_t) -1, NULL, WNOHAND);
+					pid = waitpid((pid_t) -1, NULL, WNOHANG);
 					if (pid == (pid_t) -1)
 						errno_abort("wait for child");
 				} while (pid != (pid_t) 0);
