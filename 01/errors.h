@@ -1,3 +1,6 @@
+#ifndef __errors_h
+#define __errors_h
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -14,3 +17,5 @@
 		text, __FILE__, __LINE__, strerror(errno));	\
 	abort();	\
 	} while (0)
+
+#endif 
